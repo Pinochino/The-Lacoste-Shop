@@ -10,118 +10,104 @@
 }
 
 #main {
+  width: auto;
 }
 
-#header {
-  padding-left: calc(-50%);
-  height: 50px;
-  position: relative;
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: content-box;
 }
 
-
-.header-navbar-top {
-  margin-top: calc(-1%);
-  background-color:white;
-  position: relative;
-}
-
-.header-navbar-top .navbar-brand img {
-  width: 15rem;
-  height: 50%;
-  margin-left: calc(-35%);
-  margin-top: calc(-20%);
-}
-
-.offcanvas-body .form-control {
-  width: 875px;
-  border-radius: 16px;
-  background-color: rgb(244, 244, 244);
-  margin-left: calc(-10%);
-}
-
-.container-fluid .nav {
-  margin-top: calc(-5%);
-  padding-bottom: calc(-50%);
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
+#banner .container-fluid {
+  padding: 0;
+  margin: 0;
 }
 
 .nav .nav-link {
-  color: black;
+  color: white;
+}
+.container-fluid .nav {
+ transform: translateY(-2.5em);
 }
 
-.offcanvas {
-  background-color: #f5fffa;
+/********************************************side-bar****************************************/
+
+.offcanvas-body .form-control {
+  width: 953px;
+  border-radius: 16px;
+  background-color: rgb(244, 244, 244);
+  margin-left: calc(-15%);
+  height: 46px;
+
 }
 
-.offcanvas .offcanvas-body {
-  display: none;
+.navbar-feature {
+  transform: translate(5em, -16%);
+  display: inline;
+  letter-spacing: 8px;
+  fill: color;
 }
 
-.offcanvas-components .d-flex {
-  margin-top: -2%;
+.offcanvas-components .d-flex .form-control {
+  margin: 0 auto;
+  transform: translate(2em, -1em);
+}
+/***********************dropdown-content************/
+.dropdown-menu {
+  border-radius: 0;
+  padding: .5em;
+  border: none;
+  box-shadow: 0 3px 6px rgb(0, 0, 0, .23);
+  object-fit: cover;
 }
 
-.offcanvas-infor img {
-  width: 5rem;
-  margin-left: calc(3%);
-}
-
-.offcanvas-header .btn-close {
-  margin-top: calc(-90%);
-  margin-left: 21rem;
-}
-
-.offcanvas-infor .nav {
-  display: flex;
-  flex-direction: column;
-}
-
-.offcanvas-infor .infor-list {
+.dropdown-menu ul {
   list-style: none;
+  padding: 0;
 }
 
-.offcanvas-infor .offcan-text {
+.dropdown-menu.show {
   display: flex;
-  flex-direction: column;
 }
 
-.offcanvas-infor h3 {
-  margin-top: 1rem;
+.dropdown-menu li a {
+  color: gray;
+  padding: .5em 1em;
+  font-family: "Archivo", sans-serif;
+
 }
 
-.offcanvas-components .bi-person-circle {
-  margin-top: calc(-7%);
-  margin-left: 54rem;
+.dropdown-menu li:first-child a {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #000;
+  font-family: "/Roboto/Roboto-Bold.ttf";
 }
 
-.offcanvas-components .bi-suit-heart {
-  margin-top: calc(-70px);
-  margin-left: 2rem;
+.dropdown-menu.show {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100vw;
+  /* Chiều rộng 100% của viewport */
+  height: 100vh;
+  /* Chiều cao 100% của viewport */
+  background-color: white;
+  /* Màu nền có thể thay đổi */
+  z-index: 999;
+  /* Đảm bảo hiển thị trên các phần tử khác */
+  /* Cho phép cuộn nếu nội dung quá dài */
 }
 
-.offcanvas-components .bi-bag-heart {
-  margin-top: calc(-70px);
-  margin-left: 2rem;
-}
 
-.container .navbar-toggler {
-  margin-top: -2.5rem;
-}
 
-#banner {
-}
-
-#banner .banner-image {
-  position: relative;
-  max-height: 40%;
-}
 
 #banner .banner-ad {
   position: absolute;
-  top: 70%;
-  padding-left: 3%;
+  transform: translate(3rem, -20rem);
 }
 
 .banner-ad .banner-text {
@@ -142,10 +128,57 @@
 .banner-ad .text2 {
   font-size: 1rem;
 }
-#carouselExample{
-  margin-bottom: 4rem;
+
+.dropdown-image .col-lg-3 img {
+  height: 195px;
+  width: 330px;
+  display: inline-flex;
+  transition: translateY(-40%);
 }
-#carouselExample .carousel-item img{
+
+.dropdown-image {
+  left: 10rem;
+  white-space: nowrap;
+  overflow-x: hidden;
+  font-family: "Archivo", sans-serif;
+}
+
+
+.dropdown-menu .mega-menu-text {
+  margin-left: 7%;
+}
+
+.collection .row .col-lg-3 img {
+  height: 195px;
+  width: 330px;
+  grid-template-rows: 15px;
+}
+
+.collection .row2 {
+  padding: 20% 0;
+  margin-left: -101.2%;
+}
+
+.collection .row1 {
+  margin-left: calc(-2%);
+}
+
+.collection .row2 .col-lg-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+
+#carouselExample {
+  margin-bottom: 4rem;
+  font-family: "/Roboto/Roboto-Medium.ttf";
+}
+
+#carouselExample .carousel-item img {
   height: 513px;
   width: 365px;
 }
@@ -163,9 +196,22 @@
   position: absolute;
   top: calc(6.7%);
 }
-.item .thumbnail .bi-suit-heart:hover path{
- fill: red;
+
+.item .thumbnail .bi-suit-heart:hover path {
+  fill: red;
 }
+
+.owl-nav {
+  transform: translateY(-30rem);
+  margin: 10px 10px 0px 85rem;
+  width: fit-content;
+}
+
+.owl-nav button {
+  font-size: xx-large !important;
+  font-weight: lighter;
+}
+
 
 
 
@@ -217,31 +263,45 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
+
+.conten1 .cote1 .btn6 {
+  width: 6.5rem;
+  display: flex;
+  align-items: center;
+}
+
 /**************************content2********************/
 .conten2 {
   margin-top: 5rem;
 }
+
 .conten2 .row .embed-responsive-item {
   width: 668px;
   height: 668px;
 }
-.container-fluid .col-lg-6{
-    position: relative;
+
+.container-fluid .col-lg-6 {
+  position: relative;
 }
-.container .col-lg-6 h5, .btn1{
-    position: absolute;
-    transform: translate(70%);
-    top: 75%;
-    height: 3rem;
+
+.container .col-lg-6 h5,
+.btn1 {
+  position: absolute;
+  transform: translate(70%);
+  top: 75%;
+  height: 3rem;
 }
-.col-lg-6 .in-image{
+
+.col-lg-6 .in-image {
   position: absolute;
   transform: translate(3.5rem, 21rem);
   top: 15%;
   color: white;
   font-size: 45px;
 }
-.container .col-lg-6 h3, .btn2{
+
+.container .col-lg-6 h3,
+.btn2 {
   position: absolute;
   transform: translate(80%);
   top: 75%;
@@ -251,9 +311,9 @@
 
 #footer {
   background-color: rgb(244, 244, 244);
-
   padding-top: 3.3rem;
-  font-size: clamp(calc(0.3333px), 50%);
+  width: inherit;
+  font-family: "Roboto/oboto-Light.ttf";
 }
 
 #footer .row .col-lg-8 {
@@ -295,7 +355,7 @@
   padding: 3rem 1.2rem;
 }
 
-.col-lg-8 .col > h5 > h6 {
+.col-lg-8 .col>h5>h6 {
   font-family: "Archivo", sans-serif;
   font-weight: normal;
   color: #545454;
@@ -324,4 +384,32 @@
 #footer .col-lg-8 h6 {
   font-size: medium;
   font-weight: normal;
+}
+
+#footer .icon-footer span:hover {
+  color: bisque;
+}
+
+
+.header {
+  transition: all 0.3s ease;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.nav {
+  transition: all 0.3s ease;
+  max-height: 0;
+
+}
+
+.folded {
+  max-height: 100px;
+  /* Chiều cao thanh nav khi gập */
 }

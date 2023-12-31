@@ -26,22 +26,28 @@ $(document).ready(function () {
         }
     }
 })
-$(document).ready(function(){
-    $(window).scroll(function(){
-        if($(this).scrollTop()){
-            $('header').addClass('sticky');
-        }else{
-            $('header').addClass('sticky');
 
-        }
-    });
+$('.loop').owlCarousel({
+  center: true,
+  items:2,
+  loop:true,
+  margin:10,
+  responsive:{
+      600:{
+          items:4
+      }
+  }
 });
-// Lấy thẻ video
-const video = document.getElementById('myVideo');
+$('.nonloop').owlCarousel({
+  center: true,
+  items:2,
+  loop:false,
+  margin:10,
+  responsive:{
+      600:{
+          items:4
+      }
+  }
+});
 
-// Lắng nghe sự kiện khi video hoàn thành
-video.addEventListener('ended', function() {
-  // Reset video về thời điểm ban đầu và chạy lại
-  video.currentTime = 0;
-  video.play();
-});
+
