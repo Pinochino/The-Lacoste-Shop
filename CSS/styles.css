@@ -452,9 +452,19 @@ tbody input{
 #cart-table .price-total{
   margin-top: 10px;
   font-weight: bolder;
-
+  text-align: right;
 }
 #cart-table .price-total p{
   display: inline;
 }
 
+/*****************cart*******/
+#cart-table {
+ height:  100vh;
+ width: 500px;
+ right: 0;
+ top: 0;
+ background-color: #ddd;
+ padding: 12px auto;
+ overflow-y: scroll;
+}

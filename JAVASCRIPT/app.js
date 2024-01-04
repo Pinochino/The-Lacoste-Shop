@@ -52,52 +52,132 @@ $('.nonloop').owlCarousel({
   }
 });
 
-  const btn = document.querySelectorAll(".btncart");
-  btn.forEach(function(btncart, index){
-      btncart.addEventListener("click", function(event){{
-          var btnItem = event.target;
-          var product = btnItem.parentElement.parentElement;
-          var productImg = product.querySelector("img").src;
-          var productName = product.querySelector("p").innerText;
-          var productCost = product.querySelector(".btncost").innerText;
-        //   console.log(productImg, productName, productCost);
-          addCart(productImg, productName, productCost);
-  }});
+//   const btn = document.querySelectorAll(".btncart");
+//   btn.forEach(function(btncart, index){
+//       btncart.addEventListener("click", function(event){{
+//           var btnItem = event.target;
+//           var product = btnItem.parentElement.parentElement;
+//           var productImg = product.querySelector("img").src;
+//           var productName = product.querySelector("p").innerText;
+//           var productCost = product.querySelector(".btncost").innerText;
+//         //   console.log(productImg, productName, productCost);
+//           addCart(productImg, productName, productCost);
+//   }});
+// });
+// function addCart(productImg, productName, productCost){
+//     var addtr = document.createElement("tr");
+//     var cartItem = document.querySelectorAll("tbody tr");
+//     for (var i = 0; i < cartItem.length; i++){
+//         let productT = document.querySelectorAll(".title");
+//         if(productT[i].innerHTML == productName){
+//             alert("Sản phẩm của bạn đã có trong giỏ hàng");
+//             return
+//         }
+//     }
+//     var trcontent = '<tr><td class="col-sm-3"><img class="img-fluid" src="'+productImg+'" alt="" <span class="title">' + productName + '</span>' + '</td><td class="col-sm-3 Cost"><p><span>' + productCost + '</span><sup>$</sup></p></td><td class="col-sm-3" ><input type="number" value="1" min="1"></td><td class="col-sm-3">Delete</td></tr>';;
+//     addtr.innerHTML = trcontent;
+//     var carttable = document.querySelector("tbody");
+//     carttable.append(addtr);
+
+//     cartTotal();
+// }
+// //---------------------totalPrice---------------//
+// function cartTotal(){
+//     var cartItem = document.querySelectorAll("tbody tr")
+//     var totalC = 0;
+//     for (var i = 0; i < cartItem.length; i++){
+//         var inputValue = parseInt(cartItem[i].querySelector("input").value);
+//         var productPrice = parseFloat(cartItem[i].querySelector("span").innerHTML);
+//         var totalA = inputValue * productPrice*1000;
+//         var totalC = totalA + totalC;
+//         var totalD = totalC.toLocaleString('de-DE');
+//     }
+//     var cartTotalE = document.querySelector(".price-total span");
+//     cartTotalE.innerHTML = totalD;
+// }
+const btn = document.querySelectorAll(".btncart");
+btn.forEach(function(btncart, index) {
+    btncart.addEventListener("click", function(event) {
+        var btnItem = event.target;
+        var product = btnItem.parentElement.parentElement;
+        var productImg = product.querySelector("img").src;
+        var productName = product.querySelector("p").innerText;
+        var productCost = product.querySelector(".btncost").innerText;
+        addCart(productImg, productName, productCost);
+    });
 });
-function addCart(productImg, productName, productCost){
-    var addtr = document.createElement("tr");
+
+function addCart(productImg, productName, productCost) {
     var cartItem = document.querySelectorAll("tbody tr");
-    for (var i = 0; i < cartItem.length; i++){
-        let productT = document.querySelectorAll("title");
-        if(productT[i].innerHTML === productName){
-            alert("Sản phẩm của bạn đã có trong giỏ hàng")
+    for (var i = 0; i < cartItem.length; i++) {
+        let productT = cartItem[i].querySelector(".title");
+        if (productT && productT.innerHTML === productName) {
+            alert("Sản phẩm của bạn đã có trong giỏ hàng");
+            return;
         }
     }
-    var trcontent = '<tr><td class="col-sm-3"><img class="img-fluid" src="'+productImg+' alt="" <span> class="title"' + productName + '</span>' + productName + '"> ' + productName + '</td><td class="col-sm-3 Cost"><p><span>' + productCost + '</span><sup>$</sup></p></td><td class="col-sm-3" ><input type="number" value="1" min="1"></td><td class="col-sm-3">Delete</td></tr>';;
+    
+
+    var addtr = document.createElement("tr");
+    var trcontent = `
+        <tr>
+            <td class="col-sm-3">
+                <img class="img-fluid" src="${productImg}" alt="">
+                <span class="title">${productName}</span>
+            </td>
+            <td class="col-sm-3 Cost">
+                <p><span class="prices">${productCost}</span><sup>$</sup></p>
+            </td>
+            <td class="col-sm-3"><input type="number" value="1" min="1"></td>
+            <td class="col-sm-3 " style="cursor: pointer;"><span class="cart-delete">Delete</span></td>
+        </tr>
+    `;
     addtr.innerHTML = trcontent;
     var carttable = document.querySelector("tbody");
-    carttable.append(addtr);
-
+    carttable.appendChild(addtr);
     cartTotal();
+    deleteCart();
 }
-//---------------------totalPrice---------------//
+// ----------------------totalPrice---------------
 function cartTotal(){
-    var cartItem = document.querySelectorAll("tbody tr")
-    // console.log(cartItem);
-    var totalC = 0;
-    for (var i = 0; i < cartItem.length; i++){
-        var inputValue = parseInt(cartItem[i].querySelector("input").value);
-        // console.log(inputValue);
-        var productPrice = parseFloat(cartItem[i].querySelector("span").innerHTML);
-        // console.log(productPrice);
-        var totalA = inputValue * productPrice*1000;
-        // var totalB = totalA.toLocaleString('de-DE');
-        var totalC = totalA + totalC;
-        var totalD = totalC.toLocaleString('de-DE');
+        var cartItem = document.querySelectorAll("tbody tr")
+        var totalC = 0;
+        for (var i = 0; i < cartItem.length; i++){
+            var inputValue = parseInt(cartItem[i].querySelector("input").value);
+            var productPrice = parseFloat(cartItem[i].querySelector(".prices").innerHTML);
+            var totalA = inputValue * productPrice*1000;
+            var totalC = totalA + totalC;
+        }
+        // var totalD = totalC.toLocaleString('de-DE');
+        var cartTotalE = document.querySelector(".price-total span");
+        cartTotalE.innerHTML = totalC.toLocaleString('de-DE');
+        inputchange();
     }
-    var cartTotalE = document.querySelector(".price-total span");
-    cartTotalE.innerHTML = totalD;
+//-------------------------Delete cart-----------
+function deleteCart(){
+     var cartItem = document.querySelectorAll("tbody tr");
+    for (var i = 0; i < cartItem.length; i++) {
+        let productT = document.querySelectorAll(".cart-delete");
+        productT[i].addEventListener("click", function(event){
+            var cartDelete = event.target;
+            var cartItemR = cartDelete.parentElement.parentElement; 
+            cartItemR.remove();
+            cartTotal();
+        });
+    }
 }
+deleteCart();
+
+function inputchange(){
+    var cartItem = document.querySelectorAll("tbody tr");
+    for (var i = 0; i < cartItem.length; i++) {
+        let inputValue = cartItem[i].querySelector("input");
+        inputValue.addEventListener("change", function(){
+            cartTotal();
+        });
+    }
+}
+
 
 
 
