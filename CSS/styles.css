@@ -9,26 +9,33 @@
   box-sizing: border-box;
 }
 
-#main {
-  width: auto;
+#content {
+  padding: 16px;
 }
 
-.container-fluid {
-  padding-left: 0;
-  padding-right: 0;
-  box-sizing: content-box;
+.carousel1 .owl-item .active img {
+  width: 365px;
+  height: 434px;
 }
+
 
 #banner .container-fluid {
   padding: 0;
-  margin: 0;
+  margin-block: 0;
+}
+
+#banner video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 .nav .nav-link {
   color: white;
 }
+
 .container-fluid .nav {
- transform: translateY(-2.5em);
+  transform: translateY(-2.5em);
 }
 
 /********************************************side-bar****************************************/
@@ -53,6 +60,7 @@
   margin: 0 auto;
   transform: translate(2em, -1em);
 }
+
 /***********************dropdown-content************/
 .dropdown-menu {
   border-radius: 0;
@@ -92,14 +100,9 @@
   left: 0;
   object-fit: cover;
   width: 100vw;
-  /* Chiều rộng 100% của viewport */
   height: 100vh;
-  /* Chiều cao 100% của viewport */
   background-color: white;
-  /* Màu nền có thể thay đổi */
   z-index: 999;
-  /* Đảm bảo hiển thị trên các phần tử khác */
-  /* Cho phép cuộn nếu nội dung quá dài */
 }
 
 
@@ -169,10 +172,6 @@
   align-items: center;
 }
 
-
-
-
-
 #carouselExample {
   margin-bottom: 4rem;
   font-family: "/Roboto/Roboto-Medium.ttf";
@@ -211,9 +210,6 @@
   font-size: xx-large !important;
   font-weight: lighter;
 }
-
-
-
 
 #content {
   margin-top: 5rem;
@@ -411,5 +407,54 @@
 
 .folded {
   max-height: 100px;
-  /* Chiều cao thanh nav khi gập */
 }
+
+#card-table{
+  margin-top: 50px;
+}
+.owl-carousel {
+  margin-top: 50px;
+}
+#cart-table img{
+  width: 70px;
+}
+tbody .image{
+  display: flex;
+ align-items: center;
+}
+tbody input{
+  width: 20%;
+  border-radius: 5px;
+}
+#cart-table {
+  width: 70%;
+  margin-top: 30px;
+  text-align: center;
+  padding-top: 30px;
+}
+#cart-table table{
+  width: auto;
+}
+#cart-table table thead tr th:first-child{
+  text-align: center;
+}
+#cart-table table thead tr th:last-child{
+  text-align: right;
+}
+#cart-table table tbody td:last-child{
+  text-align: right;
+}
+
+#cart-table table tr td {
+  border-bottom:  1px solid #ddd;
+  padding: 12px 0;
+}
+#cart-table .price-total{
+  margin-top: 10px;
+  font-weight: bolder;
+
+}
+#cart-table .price-total p{
+  display: inline;
+}
+
