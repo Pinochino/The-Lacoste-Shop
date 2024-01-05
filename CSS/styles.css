@@ -13,6 +13,10 @@
   padding: 16px;
 }
 
+#main {
+  overflow-x: hidden;
+}
+
 .carousel1 .owl-item .active img {
   width: 365px;
   height: 434px;
@@ -83,7 +87,7 @@
   color: gray;
   padding: .5em 1em;
   font-family: "Archivo", sans-serif;
-
+  text-decoration: none;
 }
 
 .dropdown-menu li:first-child a {
@@ -355,6 +359,8 @@
   font-family: "Archivo", sans-serif;
   font-weight: normal;
   color: #545454;
+  font-weight: 300;
+  font-size: 12px;
 }
 
 .col-lg-8 .col p {
@@ -409,62 +415,86 @@
   max-height: 100px;
 }
 
-#card-table{
+#card-table {
   margin-top: 50px;
 }
-.owl-carousel {
-  margin-top: 50px;
-}
-#cart-table img{
+
+
+#cart-table img {
   width: 70px;
 }
-tbody .image{
+
+tbody .image {
   display: flex;
- align-items: center;
+  align-items: center;
 }
-tbody input{
-  width: 20%;
+
+tbody input {
+  width: 25%;
   border-radius: 5px;
 }
+
 #cart-table {
   width: 70%;
   margin-top: 30px;
   text-align: center;
   padding-top: 30px;
 }
-#cart-table table{
+
+#cart-table table {
   width: auto;
 }
-#cart-table table thead tr th:first-child{
+
+#cart-table table thead tr th:first-child {
   text-align: center;
 }
-#cart-table table thead tr th:last-child{
+
+#cart-table table thead tr th:last-child {
   text-align: right;
 }
-#cart-table table tbody td:last-child{
+
+#cart-table table tbody td:last-child {
   text-align: right;
 }
 
 #cart-table table tr td {
-  border-bottom:  1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   padding: 12px 0;
 }
-#cart-table .price-total{
+
+#cart-table .price-total {
   margin-top: 10px;
   font-weight: bolder;
   text-align: right;
 }
-#cart-table .price-total p{
+
+#cart-table .price-total p {
   display: inline;
 }
 
 /*****************cart*******/
 #cart-table {
- height:  100vh;
- width: 500px;
- right: 0;
- top: 0;
- background-color: #ddd;
- padding: 12px auto;
- overflow-y: scroll;
+  height: 70vh;
+  width: 500px;
+  right: 0;
+  top: 0;
+  background-color: #d8a0a0;
+  padding: 12px auto;
+  overflow-y: scroll;
+  right: -100%;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.cartIcon {
+  cursor: pointer;
+}
+
+#cart-table .btn-close {
+  cursor: pointer;
+
+}
+
+.container .button-close {
+  transform: translateX(-12.5rem);
 }
