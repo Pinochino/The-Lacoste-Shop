@@ -1,2 +1,2 @@
-# The-thenel-Shop
+# The-Lacoste-Shop
 HTML + CSS + JS

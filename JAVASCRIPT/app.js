@@ -145,21 +145,20 @@ cartbutton1.addEventListener("click", function () {
     document.querySelector("#cart-table").style.right = "-100%";
 });
 
-var img1 = new Image();
-var img2 = new Image();
-
-function loadImage() {
-  img1.src = "/IMAGES/Carousel-Image/img13.webp";
-  img2.src = "/IMAGES/Carousel-Image/img10.webp";
-}
-
 function overImage(element) {
-  element.src = img1.src;
+    if (element.dataset.hover) {
+        element.src = element.dataset.hover;
+    }
 }
 
 function outImage(element) {
-  element.src = img2.src;
+    if (element.dataset.out) {
+        element.src = element.dataset.out;
+    }
 }
+
+
+
 
 
 
