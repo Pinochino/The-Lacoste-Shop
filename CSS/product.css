@@ -16,3 +16,79 @@
 #footer {
   margin-top: 70rem;
 }
+
+.product-content-right .image-right img{
+  width: auto;
+  height: 5%;
+  padding: 5px 0;
+}
+
+.product-content-right .image-right{
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+  margin-left: 3%;
+  margin-right: 20%;
+}
+
+.product-content .product-content-right {
+  display: inline-flex;
+}
+
+.information-product h4{
+  font-weight: bold;
+  font-size: 20px;
+  font-family: '/Roboto/Roboto-Medium.ttf' ;
+}
+p{
+  font-weight: bolder;
+ }
+
+
+ .information-product .size{
+  width: 3rem;
+  font-weight: 500;
+  border: 1px solid;
+  background-color: white;
+  font-family: '/Roboto/Roboto-Medium.ttf' ;
+ }
+
+ .information-product .button-service{
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  align-content: center;
+ }
+
+ .information-product .button-service button{
+  width: 50%;
+  border: 1px solid;
+  margin:  5px 0;
+  height: 2.5rem;
+  background-color: white;
+  display: inline-flex;
+  align-items: center;
+ justify-content: center;
+ }
+
+ .information-product .button-service button:first-child:hover{
+  background-color: black;
+  color: white;
+ }
+
+ .information-product .hotline span{
+  margin: 0 10px;
+ }
+
+ .carousel-inner .carousel-item img{
+  width: 50%;
+  height: 50%;
+ }
+
+ .information-product .size-button{
+  background-color: white;
+ }
+
+ .product-content-right .information-product{
+  padding: 5px 0;
+ }

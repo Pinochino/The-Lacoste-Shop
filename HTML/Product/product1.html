@@ -374,7 +374,7 @@
       <div id="product">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="/HTML/Base.html">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Library</a></li>
             <li class="breadcrumb-item active" aria-current="page">Data</li>
           </ol>
@@ -385,7 +385,7 @@
               <img class="img-fluid" src="/IMAGES/Carousel-Image/img13.webp" alt="" >
             </div>
             <div class="product-content-right col-lg-7">
-              <div class="image-left">
+              <div class="image-right">
                 <img src="/IMAGES/Carousel-Image/img20.webp" alt="" class="img-fluid">
                 <img src="/IMAGES/Carousel-Image/img19.webp" alt="" class="img-fluid">
                 <img src="/IMAGES/Carousel-Image/img21.webp" alt="" class="img-fluid">
@@ -394,9 +394,49 @@
               <div class="information-product">
                 <h4>Áo thun cổ tròn</h4>
                 <p><span>490.000<sup>đ</sup></span></p>
-                <p><span><strong>Màu sắc: </strong>Vàng nhạt</span></p>
-                <p></p>
+                <div class="seection-color">
+                  <p><span><strong>Màu sắc: </strong>Vàng nhạt</span></p>
+                  <span><button></button></span>
+                </div>
+                <p style="display: flex; justify-content: space-evenly; align-content: center;">
+                  <p class="">Size: </p>
+                  <div class="size-button">
+                    <span><button class="size">S</button></span>
+                    <span><button class="size">M</button></span>
+                    <span><button class="size">L</button></span>
+                    <span><button class="size">XL</button></span>
+                    <span><button class="size">XL</button></span>
+                    <span><button class="size">XXL</button></span>
+                  </div>
+                </p>
+                <p>Số lượng: <input style="width: 11%; border: 1px solid;" type="number" min="0" value="0"></p>
+                <p style="color: red">Vui lòng chọn size *</p>
+                <div class="button-service">
+                  <button class="btn btn"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
+                    <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9zM1 7v1h14V7zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5"/>
+                  </svg>MUA HÀNG</button>
+                  <button class="btn" style="border:1px solid rgb(168, 168, 81); color: rgb(137, 137, 55); font-weight:500;">Tìm tại cửa hàng</button>
+                </div>
+                <div class="hotline">
+                  <p><span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                  </svg>Hotline</span><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-heart" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.965 12.695a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6-3.004 6-7 6a8 8 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a11 11 0 0 0 .398-2m-.8 3.108.02-.004c1.83-.363 2.948-.842 3.468-1.105A9 9 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.4 10.4 0 0 1-.524 2.318l-.003.011a11 11 0 0 1-.244.637c-.079.186.074.394.273.362a22 22 0 0 0 .693-.125M8 5.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+                  </svg>Chat</span><span>Mail</span></p>
+                </div>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-qr-code" viewBox="0 0 16 16">
+                  <path d="M2 2h2v2H2z"/>
+                  <path d="M6 0v6H0V0zM5 1H1v4h4zM4 12H2v2h2z"/>
+                  <path d="M6 10v6H0v-6zm-5 1v4h4v-4zm11-9h2v2h-2z"/>
+                  <path d="M10 0v6h6V0zm5 1v4h-4V1zM8 1V0h1v2H8v2H7V1zm0 5V4h1v2zM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8zm0 0v1H2V8H1v1H0V7h3v1zm10 1h-1V7h1zm-1 0h-1v2h2v-1h-1zm-4 0h2v1h-1v1h-1zm2 3v-1h-1v1h-1v1H9v1h3v-2zm0 0h3v1h-2v1h-1zm-4-1v1h1v-2H7v1z"/>
+                  <path d="M7 12h1v3h4v1H7zm9 2v2h-3v-1h2v-1z"/>
+                </svg></span>
               </div>
+            </div>
+          </div>
+          <div class="product-content-bottom-right">
+            <div class="product-content-bottom-right-top">
+              &#8744;
             </div>
           </div>
           
